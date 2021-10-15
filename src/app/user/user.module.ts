@@ -12,6 +12,7 @@ import { RegistrationuserComponent } from './registrationuser/registrationuser.c
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 
 
+
 @NgModule({
   declarations: [
     HomepageComponent,
