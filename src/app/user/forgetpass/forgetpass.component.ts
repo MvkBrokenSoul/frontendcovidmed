@@ -61,6 +61,7 @@ export class ForgetpassComponent implements OnInit {
   }
   onSubmit(){
     this.updatedPass()
+    if(this.checkOTP==this.getOTP){
     if(this.forgetForm.valid){
       this.userService.updateUser(this.forgetForm.value).subscribe(
         (res) => {
@@ -71,6 +72,10 @@ export class ForgetpassComponent implements OnInit {
           alert(err.message);
         }
       )
+  }}else{
+    alert("Wrong Otp")
+    this.modal=false;
+    this.getOTP=""
   }
 }
 
