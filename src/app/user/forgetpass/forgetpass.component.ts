@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { User } from '../models/user.model';
+import { OtpserviceService } from '../service/otpservice/otpservice.service';
 import { UserService } from '../service/userDbservice/user.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { UserService } from '../service/userDbservice/user.service';
 })
 export class ForgetpassComponent implements OnInit {
   forgetForm!: FormGroup;
-  constructor(private fb: FormBuilder,private userService: UserService,private router:Router) { this.updatedPass()}
+  constructor(private fb: FormBuilder,private userService: UserService,private router:Router,private Otpservice:OtpserviceService ) { this.updatedPass()}
   Users:User[]=[]
   getUser(){
     this.userService.getUserlist().subscribe((res:any) => {
@@ -50,7 +51,13 @@ export class ForgetpassComponent implements OnInit {
         this.forgetForm.get('name')?.setValue(list.name);
         this.forgetForm.get('phno')?.setValue(list.phno);
       }
-    
+  }
+
+  modal:Boolean=false;
+  getOTP!:string;
+  checkOTP!:string;
+  modelClose(){
+    this.modal=false;
   }
   onSubmit(){
     this.updatedPass()
@@ -65,5 +72,27 @@ export class ForgetpassComponent implements OnInit {
         }
       )
   }
+}
+
+generateOTP(){
+ 
+  if(this.forgetForm.valid){
+    var digits = '0123456789';
+    let OTP = '';
+    for (let i = 0; i < 4; i++ ) {
+        OTP += digits[Math.floor(Math.random() * 10)];
+    }
+    this.checkOTP=OTP;
+    this.modal=true;
+    this.Otpservice.sendOPT(OTP,this.forgetForm.get('email')?.value).subscribe(
+      (res)=>{
+        console.log("sent otp");
+      },
+      (err)=>{
+        console.log(err);
+      }
+      );
+  }
+ 
 }
 }

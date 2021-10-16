@@ -59,7 +59,6 @@ export class RegistrationuserComponent implements OnInit {
       }
       this.checkOTP=OTP;
       this.modal=true;
-      console.log(this.checkOTP);
       this.Otpservice.sendOPT(OTP,this.regForm.get('email')?.value).subscribe(
         (res)=>{
           console.log("sent otp");
@@ -74,12 +73,10 @@ export class RegistrationuserComponent implements OnInit {
   onSubmit() {
     this.getEmaulList();
     if(this.checkOTP==this.getOTP){
-      console.log(this.regForm.value)
       if(this.regForm.valid){
         this.userService.addUser(this.regForm.value).subscribe(
           (res) => {
             this.router.navigate(['/user/login']);
-            console.log(res)
           },
           (err) =>{
             alert(err.message);

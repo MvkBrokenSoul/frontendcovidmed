@@ -1,6 +1,7 @@
+<div *ngIf="this.modal==false; else elseBlock">
 <body>
     <div class="login-form">
-        <form [formGroup]="forgetForm" (ngSubmit)="onSubmit()" action="/examples/actions/confirmation.php" method="post">
+        <form [formGroup]="forgetForm" action="/examples/actions/confirmation.php" method="post">
             <h2 class="text-center">User Forget Password</h2>       
             <div class="form-group">
                 <input formControlName="email" type="text" class="form-control" placeholder="Email" required="required">
@@ -16,8 +17,21 @@
                 </small>
             </div><br>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Update Password</button>
+                <button (click)="generateOTP()" class="btn btn-primary btn-block">Update Password</button>
             </div>       
         </form>
     </div>
     </body>
+</div>
+    <ng-template #elseBlock>
+        <div class="card" style="width: 18rem;text-align:center;margin-left: 40%;margin-top: 50px">
+          <div class="card-body">
+            <form>
+              <label style="margin-left: -110px;">enter otp: </label><br>
+              <input autocomplete="off" [(ngModel)]="getOTP" name="getOTP"><br><br>
+            </form>
+            <button type="button" class="btn btn-secondary" (click)="modelClose()" style="margin-right:30px">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onSubmit()">Continue</button>
+          </div>
+        </div>
+        </ng-template>
