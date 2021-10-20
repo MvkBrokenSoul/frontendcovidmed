@@ -17,7 +17,7 @@
     </nav>
   </div> -->
  
-  <nav class="navbar navbar-light bg-light px-6" style="margin-right: 0px;">
+  <!-- <nav class="navbar navbar-light bg-light px-6" style="margin-right: 0px;">
     <div class="container-fluid">
       <a class="navbar-brand" style="font-weight: bold;margin-left: 30px;">Covid Medical Service</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -42,5 +42,28 @@
           </ul>
         </div>
       </div>
+    </div>
+  </nav> -->
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class=" p-4" style="background-color:#004466">
+      <ul class="navbar-nav" style="font-size:20px;font-weight: bold">
+        <li class="nav-item">
+          <a class="nav-link text-white " aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/user/doctorportal" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page"  routerLinkActive="active"  routerLink="/user/doctorportal/symptom" >Your problem</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" routerLinkActive="active" routerLink="/user/doctorportal/docres" >Service</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <nav class="navbar navbar-light" style="background-color:#99ffff">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>

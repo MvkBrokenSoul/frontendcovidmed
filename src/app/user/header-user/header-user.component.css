@@ -1,4 +1,21 @@
 
-
   /* Center the image and position the close button */
- 
+  .brand{
+    color: #ff1a75;
+    font-weight: bold;
+    animation-name: Brand;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-bottom:-10px;
+    font-size: 30px;
+  }
+  @keyframes  Brand{
+    from {color: #ff1a75;}
+    to {color: #dd99ff;}
+  }
+  .contact{
+    margin-top: 5px;
+    font-size:15px;
+    color:  #d24dff;
+  }
+  

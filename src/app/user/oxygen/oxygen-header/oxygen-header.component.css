@@ -1,7 +1,13 @@
 .nav-item{
-    margin-top: 15px;
-    background: #ffffe6;
+    margin-top: 10px;
+    background: #66d9ff;
     margin-left: 10px;
-    color:#00ffff;
     font-weight: bold;
+    color: white;
+    border-radius:5px;
+    margin-bottom: 5px;
+}
+.nav-link{
+    color:white;
+    font-size: 20px;
 }

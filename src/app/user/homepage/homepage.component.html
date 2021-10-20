@@ -1,2 +1,78 @@
 <app-header-user></app-header-user>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000" style="height: 350px;">
+        <img src="../../../assets/images/medicine.jpg" class="img-responsive" alt="Cinque Terre" width="100%"> 
+        <div class="carousel-caption d-none d-md-block">
+            <h2>Online Medicine Service</h2>
+            <p>For any emergency oxygen cylender You can buy from here </p>
+            <p> for more information <a class="btn btn-outline-primary" target="_blank" routerLink="/user/medical">click here </a></p>
+        </div>
+      </div>
+      <div class="carousel-item " data-bs-interval="20000"  style="height: 350px;">
+        <img src="../../../assets/images/oxygen-cylender.jpg" class="img-responsive oxygen" alt="Cinque Terre" width="100%"> 
+        <div class="carousel-caption">
+          <h2>Oxygen Delevery Service</h2>
+          <p>For any emergency oxygen cylender You can buy from here </p>
+          <p> for more information <a class="btn  btn-outline-primary" target="_blank" routerLink="/user/oxygen">Click here </a></p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 350px;">
+        <img src="../../../assets/images/onlinedoc.jpg" class="img-responsive" alt="Cinque Terre" width="100%"> 
+        <div class="carousel-caption d-none d-md-block">
+            <h2>Online Doctor Service</h2>
+            <p>Free online doctor service for Covid Patent </p>
+            <p> for more information <a class="btn btn-outline-primary" target="_blank" routerLink="/user/doctorportal">click here </a></p>
+        </div>
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div>
+    <p class="covid-tracker-header">Indian Covid-19 Tracker</p>
+    <marquee width="100%" direction="right" height="100px" style="color:red">
+      This information is taken from india govt website
+      </marquee>
+    <div class="dishplay-track">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card" style="height: 100px;background-color: #99ddff;">
+            <div class="card-body">
+              <h3>Active</h3>
+              <p class="card-text">{{this.coviddetails.active}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="height: 100px;background-color: #b3ff66; width:250px;">
+            <div class="card-body">
+              <h3>Discharged</h3>
+              <p class="card-text">{{this.coviddetails.discharge}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card" style="height: 100px;background-color: #ff8080;">
+            <div class="card-body">
+              <h3>Deaths</h3>
+              <p class="card-text">{{this.coviddetails.death}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <app-footer-user></app-footer-user>

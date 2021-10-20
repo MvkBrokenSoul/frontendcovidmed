@@ -1,0 +1,25 @@
+.header{
+    text-align: center;
+    border-style: hidden;
+    padding: 20px;
+    background-color:#99ffff;
+}
+h1{
+    font-size: 60px;
+    margin-top: -30px;
+    margin-bottom:10px;
+    color: #ff1a75;
+    font-weight: bold;
+    animation-name: header;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-family:Cursive;
+    overflow: initial;
+}
+@keyframes  header{
+    from {color: #ff1a75;}
+    to {color: #dd99ff;}
+  }
+h5{
+    color: #5900b3;
+}

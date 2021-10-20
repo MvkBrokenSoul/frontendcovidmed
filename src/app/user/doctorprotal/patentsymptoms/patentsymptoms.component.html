@@ -50,14 +50,14 @@
     <input formControlName="temperature" type="text" class="form-control" id="exampleFormControlInput1">
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label"><b>Enter Your problems In Details:</b></label>
+    <label for="exampleFormControlTextarea1" class="form-label">Enter Your problems In Details:</label>
     <textarea formControlName="symptomdetails"  class="form-control" id="exampleFormControlTextarea1" rows="6" columns="8"></textarea>
   </div>
   <small class = "text-danger" *ngIf="!this.patentForm.get('symptomdetails')?.valid && this.patentForm.get('symptomdetails')?.touched">
     * plsease enter symptomdetails
   </small>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label"><b>Enter Your address:</b></label>
+    <label for="exampleFormControlTextarea1" class="form-label">Enter Your address:</label>
     <textarea formControlName="address" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <small class = "text-danger" *ngIf="!this.patentForm.get('address')?.valid && this.patentForm.get('address')?.touched">
@@ -73,4 +73,6 @@
   </form>
 </div>
 </div>
+
+
 
