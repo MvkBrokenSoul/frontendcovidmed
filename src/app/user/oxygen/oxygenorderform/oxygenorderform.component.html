@@ -25,6 +25,7 @@
   <small class = "text-danger" *ngIf="!this.oxyBookForm.get('andharNo')?.valid && this.oxyBookForm.get('andharNo')?.touched">
     * plsease enter a andhar no
   </small>
+  <div class=wrapper>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label"><b>Cause For ordering Oxygen:</b></label>
     <textarea formControlName='causeforOxy' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -49,6 +50,7 @@
   <small class = "text-danger" *ngIf="!this.oxyBookForm.get('CovidAuth')?.valid && this.oxyBookForm.get('CovidAuth')?.touched">
     * plsease enter ypur reason
   </small>
+  </div>
   <br><br><br>
   <div class="mb-3">
   <div class="mb-3" style="text-align:center">

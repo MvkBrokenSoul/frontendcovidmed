@@ -6,7 +6,7 @@ h2{
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px;
 }
-p{
+.slide{
     font-size:25px;
     color: #ff1a1a;
     font-weight:bold;
@@ -24,8 +24,8 @@ a{
     font-size: 18px;
 }
 img{
-    filter: blur(2px);
-  -webkit-filter: blur(2px);
+    filter: blur(0px);
+  -webkit-filter: blur(0px);
   z-index:-3;
 }
 .covid-tracker-header{
@@ -33,6 +33,9 @@ img{
     animation-name: tracker-header;
     animation-duration:3s;
     animation-iteration-count: infinite;
+    font-size:25px;
+    font-weight:bold;
+    margin-top:25px
 }
 @keyframes  tracker-header{
     from {color: white;}
@@ -42,7 +45,7 @@ img{
     border-style: hidden;
     padding-left: 30px;
     margin-left:250px;
-    margin-top: -30px;
+    margin-top: -50px;
     margin-bottom:50px;
 }
 h3{
@@ -55,3 +58,16 @@ h3{
     margin-left: 10px;
     margin-top:-5px;
 }
+.services{
+    background:red;color: white;border-style: hidden;padding-left: 50px;
+    animation-name: service;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    font-size:25px;
+    font-weight:bold;
+    margin-top:25px
+}
+@keyframes  service{
+    from {color: white;}
+    to {color: yellow;}
+  }

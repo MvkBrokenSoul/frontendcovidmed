@@ -10,12 +10,20 @@
     font-size: 30px;
   }
   @keyframes  Brand{
-    from {color: #ff1a75;}
-    to {color: #dd99ff;}
+    from {color: #ff3333;}
+    to {color:  #ffff1a;}
   }
   .contact{
     margin-top: 5px;
     font-size:15px;
-    color:  #d24dff;
+    color:#ff1a75;
   }
-  
+  .nav-link{
+    color: #ffe6f2;
+  }
+  .nav-link:hover{
+    color:#ff33ff;
+  }
+  .active{
+    color:#ff33ff;
+    }

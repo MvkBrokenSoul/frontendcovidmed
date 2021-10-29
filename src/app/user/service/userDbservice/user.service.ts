@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from '../../models/user.model';
 
 @Injectable({
@@ -9,17 +10,17 @@ export class UserService {
   url ='http://localhost:3000/user';
   constructor(private http :HttpClient) { }
 
-  addUser(user: User){
-    return this.http.post(this.url,user);
+  addUser(user: User):Observable<User>{
+    return this.http.post<User>(this.url,user);
   }
-  getUserlist(){
-    return this.http.get(this.url);
+  getUserlist(): Observable<User[]>{
+    return this.http.get<User[]>(this.url);
   }
-  getUseById(id:any){
-    return this.http.get(`${this.url}/${id}`,);
+  getUseById(id:any): Observable<User>{
+    return this.http.get<User>(`${this.url}/${id}`,);
   }
-  updateUser(user: User){
-    return this.http.put(`${this.url}/${user._id}`,user)
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.url}/${user._id}`,user)
   }
 
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Oxybook } from '../../models/oxybook.model';
 
 @Injectable({
@@ -11,16 +12,16 @@ export class OxyDbserviceService {
   url ='http://localhost:3000/oxyuserdetails';
   constructor(private http :HttpClient) { }
 
-  addoxy(oxybookser: Oxybook){
-    return this.http.post(this.url,oxybookser);
+  addoxy(oxybookser: Oxybook): Observable<Oxybook>{
+    return this.http.post<Oxybook>(this.url,oxybookser);
   }
-  getoxylist(){
-    return this.http.get(this.url);
+  getoxylist(): Observable<Oxybook[]>{
+    return this.http.get<Oxybook[]>(this.url);
   }
-  getoxyById(id:any){
-    return this.http.get(`${this.url}/${id}`,);
+  getoxyById(id:any): Observable<Oxybook>{
+    return this.http.get<Oxybook>(`${this.url}/${id}`,);
   }
-  updateoxy(oxybookser: Oxybook){
-    return this.http.put(`${this.url}/${oxybookser._id}`,oxybookser)
+  updateoxy(oxybookser: Oxybook): Observable<Oxybook>{
+    return this.http.put<Oxybook>(`${this.url}/${oxybookser._id}`,oxybookser)
   }
 }
