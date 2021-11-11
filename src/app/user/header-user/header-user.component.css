@@ -27,3 +27,17 @@
   .active{
     color:#ff33ff;
     }
+.dropdown-menu{
+  background:#80ffff;
+}
+.dropdown-item{
+  
+  color:white;
+  font-weight:bold;
+}
+.dropdown-item:hover{
+  color:#ff33ff;
+  background:white;
+  border-radius: 15px;
+}
+.dropdown:hover .dropdown-menu {display: block;}

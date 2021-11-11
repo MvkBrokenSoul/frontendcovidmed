@@ -4,7 +4,8 @@ import { PrescriptionDbService } from 'src/app/doctor/service/prescriptionDB/pre
 import { User } from '../../models/user.model';
 import { AuthService } from '../../service/authservice/auth.service';
 import { UserService } from '../../service/userDbservice/user.service';
-
+import { pipe } from 'rxjs';
+import { filter, map, toArray } from 'rxjs/operators';
 @Component({
   selector: 'app-prescription-link',
   templateUrl: './prescription-link.component.html',
@@ -50,7 +51,7 @@ export class PrescriptionLinkComponent implements OnInit {
         console.log(this.getrevprascription)
       })
     })
-    
+  
   }
 
 }

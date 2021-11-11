@@ -1,7 +1,7 @@
 .con{
-    border-style: none;
+    border-style: outset;
     background:  #ccffff;
-    width: 1500px;
     margin-bottom: 50px;
-    padding:50px
+    padding:50px;
+    border-width: 5px
 }

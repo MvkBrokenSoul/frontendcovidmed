@@ -1,0 +1,10 @@
+label {
+    font-weight: bold;
+}
+input{
+    width:550px;
+}
+textarea{
+    width:550px;
+    height: 250px;
+}

@@ -9,6 +9,8 @@ import { OxygenmanageComponent } from './oxygenmanage/oxygenmanage.component';
 import { MedmanageComponent } from './medmanage/medmanage.component';
 import { UsermanageComponent } from './usermanage/usermanage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddmedComponent } from './addmed/addmed.component';
+import { ShowMedComponent } from './show-med/show-med.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeadminComponent,
     OxygenmanageComponent,
     MedmanageComponent,
-    UsermanageComponent
+    UsermanageComponent,
+    AddmedComponent,
+    ShowMedComponent
   ],
   imports: [
     CommonModule,
