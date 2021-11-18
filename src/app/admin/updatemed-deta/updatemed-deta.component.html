@@ -1,0 +1,33 @@
+<div style="margin: 100px;">
+    <form [formGroup]="updateMedForm"  (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="medicineName" class="form-label">Enter medicine name:</label>
+            <input formControlName="medicine_name" value = {{med_deta.medicine_name}}  type="text" class="form-control" id="medicineName" aria-describedby="">
+        </div>
+        <div class="mb-3">
+            <label for="quentity" class="form-label">Enter medicine quentity:</label>
+            <input formControlName="quentity" value = {{med_deta.quentity}} type="text" class="form-control" id="quentity" aria-describedby="">
+        </div>
+        <div class="mb-3">
+            <label for="type" class="form-label">Enter medicine type:</label>
+            <input formControlName="medicine_type" value = {{med_deta.medicine_type}} type="text" class="form-control" id="type" aria-describedby="">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Enter medicine price:</label>
+            <input formControlName="medicine_price" value = {{med_deta.medicine_price}} type="text" class="form-control" id="price" aria-describedby="">
+        </div>
+        <div class="mb-3">
+            <label for="compogisio" class="form-label">Enter medicine compogision:</label>
+            <textarea formControlName="medicine_compogision" value = {{med_deta.medicine_compogision}} class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="use" class="form-label">Enter medicine use for:</label>
+            <textarea formControlName="medicine_work" value = {{med_deta.medicine_work}} class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="Date" class="form-label">Medicine Entry Date:</label>
+            <input formControlName="date" value = {{med_deta.date}} type="text" class="form-control" id="Date" aria-describedby="">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

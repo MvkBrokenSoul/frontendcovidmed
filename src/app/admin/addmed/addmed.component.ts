@@ -47,7 +47,7 @@ export class AddmedComponent implements OnInit {
      file.append('medicine_name',(this.addMedForm.get('medicine_name')?.value))
      file.append('quentity',(this.addMedForm.get('quentity')?.value))
      file.append('medicine_type',(this.addMedForm.get('medicine_type')?.value))
-    //  file.append('medicine_image',(this.addMedForm.get('medicine_image')?.value))
+     file.append('medicine_price',(this.addMedForm.get('medicine_price')?.value))
      file.append('medicine_compogision',(this.addMedForm.get('medicine_compogision')?.value))
      file.append('medicine_work',(this.addMedForm.get('medicine_work')?.value))
      file.append('date',(this.addMedForm.get('date')?.value))

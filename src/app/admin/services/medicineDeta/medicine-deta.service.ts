@@ -15,7 +15,13 @@ export class MedicineDetaService {
   getMedList():Observable<medDeta>{
     return this.http.get<medDeta>(this.url)
   }
+  getMedListById(id:any):Observable<medDeta>{
+    return this.http.get<medDeta>(`${this.url}/${id}`)
+  }
   updateMed(med_deta:medDeta):Observable<medDeta>{
     return this.http.put<medDeta>(`${this.url}/${med_deta._id}`,med_deta)
+  }
+  delete(id:any){
+    return this.http.delete(`${this.url}/${id}`)
   }
 }

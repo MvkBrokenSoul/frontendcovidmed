@@ -1,3 +1,31 @@
-<div>
-    <img  src="http://res.cloudinary.com/covid-home-care/image/upload/v1636546636/soud0psr87aktwcmnz4p.png">
-</div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Medicine name</th>
+            <th scope="col">Quentity</th>
+            <th scope="col">Type</th>
+            <th scope="col">Price</th>
+            <th scope="col">Compogision</th>
+            <th scope="col">Work</th>
+            <th scope="col">Date of update</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of this.medicine,let i = index">   
+        <tr>
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.medicine_name}}</td>
+            <td>{{item.quentity}}</td>
+            <td>{{item.medicine_type}}</td>
+            <td>{{item.medicine_price}}</td>
+            <td>{{item.medicine_compogision}}</td>
+            <td>{{item.medicine_work}}</td>
+            <td>{{item.date}}</td>
+            <td><button class = "btn btn-primary" routerLink="/admin/UpdatemedDeta/{{item._id}}">Update</button></td>
+            <td><button class="btn btn-danger" (click)="onDelete(item._id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+

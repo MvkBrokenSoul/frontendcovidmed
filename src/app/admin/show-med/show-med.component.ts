@@ -25,4 +25,14 @@ export class ShowMedComponent implements OnInit {
       console.log(this.medicine)
     })
   }
+  onDelete(id:any){
+    this.medAddService.delete(id).subscribe((res)=>{
+      this.getMedicine();
+    },
+    (err)=>{
+      alert(err.massage)
+    }
+    )
+  }
+  
 }

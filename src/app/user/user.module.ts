@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginuserComponent } from './loginuser/loginuser.component';
 import { RegistrationuserComponent } from './registrationuser/registrationuser.component';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { ForgetpassComponent } from './forgetpass/forgetpass.component';
     LoginuserComponent,
     RegistrationuserComponent,
     ForgetpassComponent,
+    
 
   ],
   imports: [
@@ -29,7 +30,8 @@ import { ForgetpassComponent } from './forgetpass/forgetpass.component';
     UserRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ]
 })
 export class UserModule { }

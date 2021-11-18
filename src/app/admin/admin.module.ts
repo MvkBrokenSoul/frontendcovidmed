@@ -11,6 +11,8 @@ import { UsermanageComponent } from './usermanage/usermanage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddmedComponent } from './addmed/addmed.component';
 import { ShowMedComponent } from './show-med/show-med.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { UpdatemedDetaComponent } from './updatemed-deta/updatemed-deta.component';
 
 
 @NgModule({
@@ -22,13 +24,15 @@ import { ShowMedComponent } from './show-med/show-med.component';
     MedmanageComponent,
     UsermanageComponent,
     AddmedComponent,
-    ShowMedComponent
+    ShowMedComponent,
+    UpdatemedDetaComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule
   ]
 })
 export class AdminModule { }

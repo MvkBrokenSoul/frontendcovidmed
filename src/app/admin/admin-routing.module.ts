@@ -5,6 +5,7 @@ import { HomeadminComponent } from './homeadmin/homeadmin.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 import { MedmanageComponent } from './medmanage/medmanage.component';
 import { OxygenmanageComponent } from './oxygenmanage/oxygenmanage.component';
+import { UpdatemedDetaComponent } from './updatemed-deta/updatemed-deta.component';
 import { UsermanageComponent } from './usermanage/usermanage.component';
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'homeadmin',canActivate:[AuthGuard],component:HomeadminComponent},
 {path: 'medmanage',canActivate:[AuthGuard],component:MedmanageComponent},
 {path: 'oxygenmanage',canActivate:[AuthGuard],component:OxygenmanageComponent},
-{path: 'usermanage',canActivate:[AuthGuard],component:UsermanageComponent}
+{path: 'usermanage',canActivate:[AuthGuard],component:UsermanageComponent},
+{path: 'UpdatemedDeta/:id',canActivate:[AuthGuard],component:UpdatemedDetaComponent}
 ];
 
 @NgModule({
