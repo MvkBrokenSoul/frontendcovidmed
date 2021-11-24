@@ -29,13 +29,14 @@ img{
   z-index:-3;
 }
 .covid-tracker-header{
-    background:red;color: white;border-style: hidden;padding-left: 50px;
+    background:red;color: white;border-style: hidden;padding: 20px;
     animation-name: tracker-header;
     animation-duration:3s;
     animation-iteration-count: infinite;
     font-size:25px;
     font-weight:bold;
-    margin-top:25px
+    margin-top:25px;
+    
 }
 @keyframes  tracker-header{
     from {color: white;}
@@ -59,7 +60,7 @@ h3{
     margin-top:-5px;
 }
 .services{
-    background:red;color: white;border-style: hidden;padding-left: 50px;
+    background:red;color: white;border-style: hidden;padding: 20px;
     animation-name: service;
     animation-duration:3s;
     animation-iteration-count: infinite;

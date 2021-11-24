@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light fixed-top" style="background-color: #ccffff;">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <a class="navbar-brand mx-3 mt-3" href="#" ><h1>Covid Medical Service</h1></a>
+      <form class="d-flex" style = "margin-left:150px;">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:500px; height: 50px;;">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left:150px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><div style="margin-top:10px;"><fa-icon [icon]="cart" style="font-size:30px;"></fa-icon></div></a>
+        </li>
+        <li class="nav-item" style="margin-left:80px;margin-top:-60px;">
+          <a class="nav-link active" aria-current="page" href="#"><div style="margin-top:10px;"><fa-icon [icon]="bell" style="font-size:30px;"></fa-icon></div></a>
+        </li>
+      </ul>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:300px;">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title" id="offcanvasNavbarLabel" style="margin-top: 20px; background: #00ccff;border-style: none;padding-left: 25px;padding-right: 0px;width:100%;height:80px;padding-top: 20px;" >Medicaine Service</h1>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item offcanvas1">
+              <a class="nav-link active" aria-current="page" href="#">Fever Tables</a>
+            </li>
+            <li class="nav-item offcanvas1">
+              <a class="nav-link active" aria-current="page" href="#">Serap Medicine</a>
+            </li>
+            <li class="nav-item offcanvas1">
+              <a class="nav-link active" aria-current="page" href="#">Vitamine and Minarel</a>
+            </li>
+            <li class="nav-item offcanvas1">
+              <a class="nav-link active" aria-current="page" href="#">Baby and Mom Care</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
