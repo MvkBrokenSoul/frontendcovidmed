@@ -1,0 +1,17 @@
+<app-med-nav></app-med-nav>
+<h1>{{type}}</h1>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+  <div class="col" *ngFor="let item of filteredmeddata">
+    <a [routerLink]="['/user/medical/detailedmed',item.medicine_name]" style="text-decoration: none;">
+    <div class="card">
+      
+      <img src="{{item.medicine_image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title" style="font-weight:bold">{{item.medicine_name}} {{item.medicine_power}}</h3>
+        <p class="card-text" style="font-weight:bold;margin-left: -0.9px;color: blue; font-size: 25px;;">Price: ₹ {{item.medicine_price}}</p>
+        <!-- <app-addto-cart url="/user/medical/showallmed/{{type}}" med_image="{{item.medicine_image}}" med_name="{{item.medicine_name}}" med_power="{{item.medicine_power}}" med_price="{{item.medicine_price}}" med_type="{{item.medicine_type}}"></app-addto-cart> -->
+      </div>
+    </div>
+  </a>
+  </div>
+</div>

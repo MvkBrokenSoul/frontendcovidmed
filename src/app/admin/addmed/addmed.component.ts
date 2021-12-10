@@ -21,6 +21,8 @@ export class AddmedComponent implements OnInit {
     this.addMedForm = this.fb.group({
     _id:[''],
     medicine_name : [''],
+    medicine_company : [''],
+    medicine_power : [''],
     quentity: [],
     medicine_type:[''],
     medicine_price:[],
@@ -45,6 +47,8 @@ export class AddmedComponent implements OnInit {
      file.append('image',this.image);
      file.append('_id',(this.addMedForm.get('_id')?.value))
      file.append('medicine_name',(this.addMedForm.get('medicine_name')?.value))
+     file.append('medicine_company',(this.addMedForm.get('medicine_company')?.value))
+     file.append('medicine_power',(this.addMedForm.get('medicine_power')?.value))
      file.append('quentity',(this.addMedForm.get('quentity')?.value))
      file.append('medicine_type',(this.addMedForm.get('medicine_type')?.value))
      file.append('medicine_price',(this.addMedForm.get('medicine_price')?.value))

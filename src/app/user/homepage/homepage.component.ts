@@ -19,9 +19,17 @@ export class HomepageComponent implements OnInit {
     death: '',
     discharge: ''
   }
+  covid:any[]=[]
   Covidtracker(){
     this.covidTracker.getCovidDetails().subscribe((res:any)=>{
-      this.coviddetails=res
+      this.covid=res
+      for(let item of this.covid){
+        if(item.country == 'India'){
+          this.coviddetails.active = item.cases;
+          this.coviddetails.death = item.deaths;
+          this.coviddetails.discharge=item.recovered;
+        }
+      }
       console.log(this.coviddetails)
     })}
 }

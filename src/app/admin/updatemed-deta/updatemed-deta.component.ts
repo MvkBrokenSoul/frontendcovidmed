@@ -17,13 +17,15 @@ export class UpdatemedDetaComponent implements OnInit {
   med_deta:medDeta={
     _id: '',
     medicine_name: '',
+    medicine_company: '',
+    medicine_power: '',
     quentity: 0,
     medicine_type: '',
     medicine_price: 0,
     medicine_image: '',
     medicine_compogision: '',
     medicine_work: '',
-    date: ''
+    date: '',
   }
 
   updateMedForm!:FormGroup

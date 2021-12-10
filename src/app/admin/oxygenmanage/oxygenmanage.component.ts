@@ -90,6 +90,15 @@ addOxy(){
     )
     
   }
-
+  onClick(item:Oxybook){
+    this.oxyDb.updateoxy(item).subscribe(
+      (res)=>{
+        console.log("success")
+      },(err)=>{
+        console.log(err.message)
+      }
+      
+      )
+  }
 
 }

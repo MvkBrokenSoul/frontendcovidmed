@@ -29,6 +29,7 @@
       <th scope="col">address</th>
       <th scope="col">Cause for ordering oxygen</th>
       <th scope="col">Is covid effected?</th>
+      <th scope="col">Delevery Status</th>
     </tr>
   </thead>
   <tbody *ngFor = "let item of this.revoxyUseThis">
@@ -41,7 +42,14 @@
       <td><b>{{item.pin}}</b></td>
       <td><b>{{item.address}}</b></td>
       <td><b>{{item.causeforOxy}}</b></td>
-      <td><b>{{item.CovidAuth}}</b></td>  
+      <td><b>{{item.CovidAuth}}</b></td>
+      <td>
+        <select class="deletvery" [(ngModel)]="item.deletveryStat" >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select><br><br>
+        <button class="btn btn-primary" (click)="onClick(item)">Save</button>
+      </td>
       <td>
       </td>
     </tr>

@@ -9,4 +9,5 @@ export interface Oxybook{
     causeforOxy:string;
     CovidAuth:boolean;
     date:Date;
+    deletveryStat:string;
 }

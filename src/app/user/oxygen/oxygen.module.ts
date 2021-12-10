@@ -10,6 +10,7 @@ import { CheckOxygenOrderComponent } from './check-oxygen-order/check-oxygen-ord
 import { OxygenorderformComponent } from './oxygenorderform/oxygenorderform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     OxygenFooterComponent,
     OrderOxygenComponent,
     CheckOxygenOrderComponent,
-    OxygenorderformComponent
+    OxygenorderformComponent,
+    OrderDetailsComponent
   ],
   imports: [
     CommonModule,

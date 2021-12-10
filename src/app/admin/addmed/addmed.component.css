@@ -1,7 +1,7 @@
 label {
     font-weight: bold;
 }
-input{
+.form-control{
     width:550px;
 }
 textarea{

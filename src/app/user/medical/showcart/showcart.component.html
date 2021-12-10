@@ -1,0 +1,34 @@
+<app-med-nav></app-med-nav>
+<div class="item" *ngIf="allcart.length!=0;else elseBlock">
+
+  <div  *ngFor="let item of allcart.reverse(),let i = index" >
+  <div class="card" >
+    <div class="card-body">
+      <a [routerLink]="['/user/medical/detailedmed',item.med_name]" style="text-decoration: none;">
+      <img src={{item.med_image}} class="img-thumbnail" alt="..." style="height: 150px;width: 150px;"></a>
+      <a [routerLink]="['/user/medical/detailedmed',item.med_name]" style="text-decoration: none;">
+      <p class="name">{{item.med_name}} {{item.med_power}}</p></a>
+      <p class="price">₹ {{(item.med_price*item.med_quentity)}}</p>
+      <select class="quentity" [(ngModel)]="item.med_quentity" >
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+      <a class="btn btn-danger" (click)="Delete(item._id)">delete item</a>
+    </div>
+  </div>
+</div>
+  <div class="buy">
+    <p style="font-size:20px;font-weight:bold;margin-left: 50px;">If you want to Buy Plesase click here</p><br>
+    
+    <a class="btn btn-primary " style="width:70%;margin-left: 50px; margin-top:-30px;" (click)="buy()"> Buy Now</a>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+<div class="alert alert-primary" role="alert" style="margin-top: 150px; margin-left: 350px; width:50%;text-align: center;">
+  No Item In Cart
+</div>
+</ng-template>

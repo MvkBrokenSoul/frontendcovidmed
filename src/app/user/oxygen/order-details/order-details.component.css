@@ -1,0 +1,27 @@
+.loadbar
+    {
+         width:25px;
+         height:200px;
+         background-color:#80ffff;
+         border:1px solid #ccc;
+         position:relative; 
+    }
+    .bar
+    {
+        width:100%;
+        display:block;        
+        font-family:arial;
+        font-size:12px; 
+        background-color:white;
+        color:#80ffff;       
+        position:absolute;
+        bottom:0;        
+    }
+    .card{
+        margin-top: 50px;
+        width:50%;
+        margin-left:350px;
+        padding:30px;
+        margin-bottom: 100px;
+        height:400px;
+    }

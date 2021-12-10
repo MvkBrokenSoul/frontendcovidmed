@@ -1,0 +1,17 @@
+.g-4{
+    margin-left:100px;
+    margin-right:50px;
+    margin-top: 10px;
+    display: flex;
+    overflow: hidden
+}
+h1{
+    margin-top: 200px;
+    margin-left:100px;
+}
+.card{
+    margin-left:40px;
+}
+card-text{
+    font-weight:bold
+}

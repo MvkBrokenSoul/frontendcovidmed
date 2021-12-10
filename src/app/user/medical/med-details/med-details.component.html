@@ -1,0 +1,22 @@
+<app-med-nav></app-med-nav>
+<div *ngFor="let item of filteredmeddata" style="margin:150px;">
+<img src={{item.medicine_image}} class="img-thumbnail" alt="..." style="height: 300px;width:300px;">
+<div class="med_name">{{item.medicine_name.toUpperCase()}} {{item.medicine_power}}<br> <br> <p style="margin-left:30px;font-size: 20px;;">Produce by {{item.medicine_company}}</p></div>
+<div class="med_price">Price:- ₹{{item.medicine_price}}</div>
+<br>
+<a href="/user/medical/detailedmed/{{item.medicine_name}}" class="btn btn-primary" (click)="onClick(item)">Add to Cart</a>
+
+<table class="table table-warning">
+    <tbody>
+      <tr>
+        <th scope="row" style="border:1px solid; width:300px">Compogision</th>
+        <td>{{item.medicine_compogision}}</td>
+      </tr>
+      <tr>
+        <th scope="row" style="border:1px solid; width:300px;">Function And Side Effect Of Medicine</th>
+        <td>{{item.medicine_work}}</td>
+      </tr>
+    </tbody>
+  </table>
+<app-show-med type="{{item.medicine_type}}"></app-show-med>
+</div>
