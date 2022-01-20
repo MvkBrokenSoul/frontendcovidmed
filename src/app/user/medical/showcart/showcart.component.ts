@@ -1,3 +1,4 @@
+import { ifStmt } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Cart } from '../../models/cart.model';
 import { CartServiceService } from '../../service/cardService/cart-service.service';
@@ -11,18 +12,21 @@ export class ShowcartComponent implements OnInit {
 
   constructor(
     private cartService:CartServiceService
-  ) { }
+  ) {
+
+
+   }
     allcart:Cart[]=[]
   ngOnInit(): void {
 
     this.getdata()
+
   }
 
   getdata(){
     this.cartService.getCartitem().subscribe((res:any)=>{
       this.allcart = res;
       console.log(this.allcart)
-      
     })
   }
   Delete(id:any){
@@ -34,7 +38,12 @@ export class ShowcartComponent implements OnInit {
   }
   buy(){
     // this.cartService.deleteallCartitem().subscribe(res=>{})
-    console.log(this.allcart)
+    alert("the item will deleverd withen today")
+    this.cartService.deleteallCartitem().subscribe(res=>{
+      console.log("success")
+    },(err)=>{
+      console.log(err.massage)
+    })
+    this.getdata()
   }
-
 }
