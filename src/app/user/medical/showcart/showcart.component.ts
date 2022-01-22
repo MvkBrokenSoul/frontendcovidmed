@@ -41,9 +41,9 @@ export class ShowcartComponent implements OnInit {
     alert("the item will deleverd withen today")
     this.cartService.deleteallCartitem().subscribe(res=>{
       console.log("success")
+      this.getdata()
     },(err)=>{
       console.log(err.massage)
     })
-    this.getdata()
   }
 }

@@ -19,7 +19,7 @@
     <span *ngIf="this.oxyBookForm.get('pin')?.errors?.PinIsNotAllowed">service is not allowed in this area</span>
   </small>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label"><b>Enter Andher No:</b></label>
+    <label for="exampleFormControlInput1" class="form-label"><b>Enter Aadhaar No:</b></label>
     <input formControlName='andharNo' type="text" class="form-control" id="exampleFormControlInput1">
   </div>
   <small class = "text-danger" *ngIf="!this.oxyBookForm.get('andharNo')?.valid && this.oxyBookForm.get('andharNo')?.touched">
