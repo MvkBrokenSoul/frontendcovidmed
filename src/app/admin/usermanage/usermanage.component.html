@@ -1,1 +1,20 @@
 <app-headeradmin></app-headeradmin>
+
+<table class="table" style="width:60%;margin-left: 150px;">
+    <thead>
+      <tr>
+        <th scope="col">index</th>
+        <th scope="col">Name</th>
+        <th scope="col">email</th>
+        <th scope="col">phno</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of this.users,let i = index">
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phno}}</td>
+      </tr>
+    </tbody>
+  </table>
